@@ -1,32 +1,35 @@
 # Highly Available Web Application on AWS (Terraform)
 
-This project provisions a **highly available, fault-tolerant web application architecture on AWS** using Terraform.
-
-It demonstrates core AWS infrastructure concepts including VPC design, Auto Scaling, Load Balancing, IAM, and Infrastructure as Code (IaC).
+This project provisions a **highly available web application environment on AWS** using Terraform.  
+The goal is to demonstrate practical AWS fundamentals such as networking, load balancing, auto scaling, security, and Infrastructure as Code (IaC).
 
 ---
 
 ## 🏗 Architecture Overview
 
-- Custom VPC (10.0.0.0/16)
-- Multi-AZ public and private subnets
-- Internet Gateway & NAT Gateway
-- Application Load Balancer (ALB)
-- EC2 Auto Scaling Group (private subnets)
-- Launch Template with user data
-- IAM Role & Instance Profile
-- Apache web server serving content from GitHub
-- Health checks via ALB
+The infrastructure consists of:
 
+- Custom VPC (`10.0.0.0/16`)
+- Public and private subnets across two Availability Zones
+- Internet Gateway for public access
+- NAT Gateway for outbound internet access from private subnets
+- Application Load Balancer (ALB)
+- EC2 Auto Scaling Group running in private subnets
+- Launch Template with EC2 user data
+- IAM role and instance profile for EC2
+- Apache web server serving a static page pulled from GitHub
+- ALB health checks for traffic routing and fault tolerance
 ---
 
 ## 🔐 Security Design
 
-- ALB exposed to the internet (HTTP :80)
-- EC2 instances are **not publicly accessible**
-- ALB → EC2 traffic controlled via security groups
-- IAM role attached to EC2 for secure AWS access
-- Private subnets use NAT Gateway for outbound access only
+This setup follows common AWS security best practices:
+
+- Only the Application Load Balancer is exposed to the internet (HTTP :80)
+- EC2 instances do not have public IP addresses
+- Traffic to EC2 instances is restricted to the ALB security group
+- IAM roles are used instead of static credentials
+- Private subnets access the internet only through a NAT Gateway
 
 ---
 
