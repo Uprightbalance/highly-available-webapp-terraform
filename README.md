@@ -1,3 +1,4 @@
+# ha-webapp-terraform
 # Highly Available Web Application on AWS (Terraform)
 
 This project provisions a **highly available web application environment on AWS** using Terraform.  
