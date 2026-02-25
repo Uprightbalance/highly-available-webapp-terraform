@@ -1,8 +1,8 @@
 # ha-webapp-terraform
 # Highly Available Web Application on AWS (Terraform)
 
-This project provisions a **highly available web application environment on AWS** using Terraform.  
-The goal is to demonstrate practical AWS fundamentals such as networking, load balancing, auto scaling, security, and Infrastructure as Code (IaC).
+This project delivers a **highly available web application environment on AWS** using Terraform.  
+The goal is to demonstrate practical AWS fundamentals like networking, load balancing, auto scaling, security best practices, and Infrastructure as Code (IaC).
 
 ---
 
@@ -11,7 +11,7 @@ The goal is to demonstrate practical AWS fundamentals such as networking, load b
 The infrastructure consists of:
 
 - Custom VPC (`10.0.0.0/16`)
-- Public and private subnets across two Availability Zones
+- Public and private subnets across two Availability Zones (us-east-1a & us-east-1b)
 - Internet Gateway for public access
 - NAT Gateway for outbound internet access from private subnets
 - Application Load Balancer (ALB)
