@@ -49,7 +49,7 @@ This setup follows common AWS security best practices:
 
 ### Prerequisites
 - AWS account
-- Terraform v1.5+
+- Terraform
 - AWS CLI configured
 
 ### Steps
