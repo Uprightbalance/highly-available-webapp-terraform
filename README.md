@@ -16,7 +16,7 @@ The infrastructure consists of:
 - NAT Gateway for outbound internet access from private subnets
 - **Public and Private Route Tables**
 - Public route table routes Internet-bound traffic (0.0.0.0/0) to the Internet Gateway
-- Private route table routes outbound traffic (0.0.0.0/0) to the NAT Gateway
+- Private route table routes outbound traffic (0.0.0.0/0) to the NAT Gateway (single NAT Gateway to optimize cost) 
 - Public subnets are associated with the public route table and private subnets are associated with the Private route table
 - Application Load Balancer (ALB)
 - EC2 Auto Scaling Group running in private subnets
