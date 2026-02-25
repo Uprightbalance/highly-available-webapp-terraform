@@ -53,7 +53,7 @@ This setup follows common AWS security best practices:
 - AWS CLI configured
 
 ### Steps
-terraform init
-terraform plan
-terraform apply
+- terraform init
+- terraform plan
+- terraform apply
 
