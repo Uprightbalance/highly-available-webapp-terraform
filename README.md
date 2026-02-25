@@ -14,6 +14,10 @@ The infrastructure consists of:
 - Public and private subnets across two Availability Zones (us-east-1a & us-east-1b)
 - Internet Gateway for public access
 - NAT Gateway for outbound internet access from private subnets
+- **Public and Private Route Tables**
+- Public route table routes Internet-bound traffic (0.0.0.0/0) to the Internet Gateway
+- Private route table routes outbound traffic (0.0.0.0/0) to the NAT Gateway
+- Public subnets are associated with the public route table and private subnets are associated with the Private route table
 - Application Load Balancer (ALB)
 - EC2 Auto Scaling Group running in private subnets
 - Launch Template with EC2 user data
