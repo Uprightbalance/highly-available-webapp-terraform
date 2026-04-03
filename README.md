@@ -205,3 +205,12 @@ Application provisioning is automated through infrastructure and instance bootst
 
 ```text
 https://github.com/Uprightbalance/jobapp-index.git
+```
+
+```md
+## Related Repositories
+
+- **Web content Repository**  
+Web content is pulled automatically for this repository.
+https://github.com/Uprightbalance/jobapp-index.git
+```
