@@ -14,15 +14,13 @@ It is designed to demonstrate practical cloud infrastructure engineering concept
 - IAM-based access control
 - Infrastructure as Code (IaC)
 
-Rather than focusing only on launching AWS resources, this project models a realistic baseline for hosting a resilient web workload using production-relevant design patterns.
+> Rather than focusing only on launching AWS resources, this project models a realistic baseline for hosting a resilient web workload using production-relevant design patterns.
 
 ---
 
 ## Objective
 
 The goal of this project is to answer a foundational infrastructure question:
-
-> How do you design and provision a fault-tolerant web application environment on AWS using infrastructure as code?
 
 This implementation emphasizes:
 
@@ -62,7 +60,7 @@ The infrastructure consists of:
 4. Instances serve the web application through Apache
 5. Outbound internet access from private instances is provided through the **NAT Gateway**
 
-This design ensures the application remains publicly reachable while keeping the underlying compute layer private.
+> This design ensures the application remains publicly reachable while keeping the underlying compute layer private.
 
 ---
 
@@ -79,7 +77,7 @@ This implementation intentionally follows a **security-first, high-availability-
 - **IAM roles instead of static credentials**
 - **Terraform-managed infrastructure**
 
-The result is a practical baseline that reflects common production hosting patterns for simple stateless web applications.
+> The result is a practical baseline that reflects common production hosting patterns for simple stateless web applications.
 
 ---
 
@@ -97,8 +95,6 @@ The result is a practical baseline that reflects common production hosting patte
 **Tradeoff:**
 - Requires more networking components and route configuration
 - Depends on NAT for outbound internet access from private instances
-
-> This follows a common production pattern where public traffic terminates at the load balancer, while compute resources remain isolated from direct internet exposure.
 
 ---
 
@@ -131,8 +127,6 @@ The result is a practical baseline that reflects common production hosting patte
 **Tradeoff:**
 - Requires reliable launch configuration and bootstrap automation
 - Adds dependency on Launch Template and health check behavior
-
-> The application layer is modeled as ephemeral compute capacity rather than fixed long-lived servers.
 
 ---
 
