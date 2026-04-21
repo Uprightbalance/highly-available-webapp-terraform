@@ -4,7 +4,7 @@
 
 This project provisions a highly available web application environment on AWS using Terraform.
 
-It is designed to demonstrate practical cloud infrastructure engineering concepts such as:
+It's designed to demonstrate practical cloud infrastructure engineering concepts such as:
 
 - multi-AZ networking
 - public/private subnet architecture
