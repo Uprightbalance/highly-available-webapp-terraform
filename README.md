@@ -85,7 +85,7 @@ This implementation intentionally follows a **security-first, high-availability-
 
 ### 1. Private EC2 Instances Behind a Public ALB
 
-**Decision:** Place application instances in private subnets and expose only the ALB publicly.
+**Decision:** Placed application instances in private subnets and exposed only the ALB publicly.
 
 **Why:**
 - Reduces direct attack surface
@@ -117,7 +117,7 @@ This implementation intentionally follows a **security-first, high-availability-
 
 ### 3. Auto Scaling Group for Compute Lifecycle Management
 
-**Decision:** Use an Auto Scaling Group to manage EC2 instances.
+**Decision:** Used an Auto Scaling Group to manage EC2 instances.
 
 **Why:**
 - Enables self-healing instance replacement
@@ -132,7 +132,7 @@ This implementation intentionally follows a **security-first, high-availability-
 
 ### 4. NAT Gateway for Private Subnet Internet Access
 
-**Decision:** Use a NAT Gateway to allow private instances to access the internet for package installation and application bootstrap.
+**Decision:** Used a NAT Gateway to allow private instances to access the internet for package installation and application bootstrap.
 
 **Why:**
 - Enables private instances to retrieve updates and dependencies
@@ -146,11 +146,11 @@ This implementation intentionally follows a **security-first, high-availability-
 
 ### 5. Single NAT Gateway as a Cost Optimization
 
-**Decision:** Use one NAT Gateway rather than one per Availability Zone.
+**Decision:** Used one NAT Gateway rather than one per Availability Zone.
 
 **Why:**
-- Reduces cost for a portfolio or small-scale environment
-- Keeps the architecture easier to manage for learning and demonstration purposes
+- Reduces cost for small-scale environment
+- Keeps the architecture easier to manage 
 
 **Tradeoff:**
 - Outbound internet access is not fully highly available across AZs
@@ -162,7 +162,7 @@ This implementation intentionally follows a **security-first, high-availability-
 
 ### 6. Launch Template + User Data Bootstrap
 
-**Decision:** Use Launch Template user data to install Apache, Git, and retrieve application content automatically.
+**Decision:** Used Launch Template user data to install Apache, Git, and retrieve application content automatically.
 
 **Why:**
 - Keeps provisioning self-contained
